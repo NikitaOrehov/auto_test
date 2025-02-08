@@ -5,4 +5,25 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencles on Ubuntu
+        run: |
+          sudo apt-get update
+          sudo apt-get instsll ninja-build cmake
+          ninja --version
+          cmake --version
+          gcc --version
+          sudo apt-get install libgtest-dev lebgmock-dev
+          sudo apt-get install libtbb-dev
+      - name: tests
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+          ./main
