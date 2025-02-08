@@ -31,5 +31,5 @@ jobs:
           cmake ..
           cmake --build .
           ls
-          cd 
-          ./main
+          cd test
+          ./test_main
