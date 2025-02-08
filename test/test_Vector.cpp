@@ -62,10 +62,15 @@ TEST(Vector_plus, PLUS2) {
 	}
 }
 
-TEST(Vector_at, EXPECT) {
+TEST(Vector_at, EXPECT1) {
 	Vector a(3);
 	ASSERT_ANY_THROW(a.at(5));
 	ASSERT_ANY_THROW(a.at(3));
 	ASSERT_ANY_THROW(a.at(-1));
 	EXPECT_THROW(a.at(-1), std::out_of_range);
+}
+
+TEST(Vector_at, EXPECT2) {
+	Vector a(3);
+	ASSERT_NO_THROW(a.at(5));
 }
