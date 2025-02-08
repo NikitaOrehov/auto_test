@@ -13,19 +13,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install dependencles on Ubuntu
         run: |
-          echo "start install"
           sudo apt-get update
-          echo "finish apt-get update"
           sudo apt-get install ninja-build cmake
-          echo "finish apt-get instsll ninja-build cmake"
-          ninja --version
-          cmake --version
           sudo apt-get install libgtest-dev libgmock-dev
-          echo "apt-get install libgtest-dev libgmock-dev"
       - name: tests
         run: |
           mkdir build
           cd build
           cmake ..
           cmake --build .
-          ./main
+          cd test
+          ./test_main
