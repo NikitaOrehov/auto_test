@@ -25,7 +25,11 @@ jobs:
       - name: tests
         run: |
           mkdir build
+          ls
           cd build
+          ls
           cmake ..
           cmake --build .
+          ls
+          cd 
           ./main
