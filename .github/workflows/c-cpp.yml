@@ -20,8 +20,8 @@ jobs:
           echo "finish apt-get instsll ninja-build cmake"
           ninja --version
           cmake --version
-          sudo apt-get install libgtest-dev lebgmock-dev
-          echo "apt-get install libgtest-dev lebgmock-dev"
+          sudo apt-get install libgtest-dev libgmock-dev
+          echo "apt-get install libgtest-dev libgmock-dev"
       - name: tests
         run: |
           mkdir build
