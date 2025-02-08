@@ -7,7 +7,7 @@
 
 int main(int argc, char** argv)
 {
-	std::cout << "test\n";
+	std::cout << "test123\n";
 	Vector a(3);
 	Vector b(3);
 	Vector c = a + b;
