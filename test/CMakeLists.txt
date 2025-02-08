@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(my_project)
 
-#set(include "${CMAKE_CURRENT_SOURCE_DIR}/../include")
-
-#include_directories(${include})
-
-
 # GoogleTest requires at least C++14
 #set(CMAKE_CXX_STANDARD 20)
 #set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,6 +12,7 @@ FetchContent_Declare(
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 #set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
 FetchContent_MakeAvailable(googletest)
 
 add_executable(test_main test_main.cpp test_Vector.cpp)
