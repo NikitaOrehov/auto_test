@@ -16,7 +16,7 @@ jobs:
           echo "start install"
           sudo apt-get update
           echo "finish apt-get update"
-          sudo apt-get instsll ninja-build cmake
+          sudo apt-get install ninja-build cmake
           echo "finish apt-get instsll ninja-build cmake"
           ninja --version
           cmake --version
