@@ -69,8 +69,3 @@ TEST(Vector_at, EXPECT1) {
 	ASSERT_ANY_THROW(a.at(-1));
 	EXPECT_THROW(a.at(-1), std::out_of_range);
 }
-
-TEST(Vector_at, EXPECT2) {
-	Vector a(3);
-	ASSERT_NO_THROW(a.at(5));
-}
