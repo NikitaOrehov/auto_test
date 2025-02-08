@@ -17,7 +17,6 @@ jobs:
           sudo apt-get instsll ninja-build cmake
           ninja --version
           cmake --version
-          gcc --version
           sudo apt-get install libgtest-dev lebgmock-dev
       - name: tests
         run: |
